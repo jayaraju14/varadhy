@@ -6,13 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<link href="Assets/css/style.css" rel="stylesheet">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
         <link href="images/favicon.png" rel="shortcut icon">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-       
+        <link href="Assets/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <script>
+        $(window).on('load', function () { // makes sure the whole site is loaded 
+           var loader=document.getElementById('loading');   
+           loader.style.display='none';
+        })
+    </script>
     </head>
     <body>
+        <!-- <div id="loading">
+        </div> -->
         <header id="header">
             <div id='menu-bar' class='animated fadeIn '>
                 <div class='container'>
@@ -33,11 +42,11 @@
 			<div class='row'>					
 				<div class='main_content col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-0 col-md-push-5 col-lg-6 col-lg-push-6 animated fadeInRight'>
 					<h1>Lorem Ipsum is simply dummy text.</h1>
-					<div id='header-btn'>	
-						<a href="#"><img src="Assets/images/google-play-badge.png"></a>
+					<div data-aos="fade-left" data-aos-duration="1000" data-aos-mirror="true" data id='header-btn' >	
+						<a href="#"><img  src="Assets/images/google-play-badge.png"></a>
 					</div>
 				</div>
-				<div class='col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-5 col-md-offset-0 col-md-pull-7 col-lg-5 col-lg-pull-6 col-lg-offset-1'>
+				<div data-aos="fade-right" data-aos-duration="1000" class='col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-5 col-md-offset-0 col-md-pull-7 col-lg-5 col-lg-pull-6 col-lg-offset-1'>
 					<img src="Assets/images/androidmob.png" id='header-img' class='img-responsive animated fadeInUp' alt>
 				</div>
 			</div>
@@ -62,21 +71,21 @@
         <!-- features-->
         <section id="features">
             <div class="container">
-               <div class='wow fadeInDown'>
+               <div data-aos="fade-in" data-aos-duration="1000">
 				<h2>How it Works?</h2>
 			    </div>
 			<div class='row features'>	
 				<div class='col-sm-12 col-md-4 col-lg-4 left wow fadeInLeft'>
 					<div class='row'>
-						<div class='col-sm-12 col-md-12 col-lg-12'>
+						<div  data-aos='fade-up' data-aos-duration="1000" class='col-sm-12 col-md-12 col-lg-12'>
 							<h4>lorem ipsum</h4>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 						</div>
-						<div class='col-sm-12 col-md-12 col-lg-12'>
+						<div data-aos="fade" data-aos-duration="1000" class='col-sm-12 col-md-12 col-lg-12'>
 							<h4>lorem ipsum</h4>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 						</div>
-						<div class='col-sm-12 col-md-12 col-lg-12'>
+						<div data-aos="fade-down" data-aos-duration="1000" class='col-sm-12 col-md-12 col-lg-12'>
 							<h4>lorem ipsum</h4>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 						</div>
@@ -88,15 +97,15 @@
 
                 <div class='col-sm-12 col-md-4 col-lg-4 right wow fadeInLeft'>
 					<div class='row'>
-						<div class='col-sm-12 col-md-12 col-lg-12'>
+						<div data-aos="fade-up" data-aos-duration="1000" class='col-sm-12 col-md-12 col-lg-12'>
 							<h4>lorem ipsum</h4>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 						</div>
-						<div class='col-sm-12 col-md-12 col-lg-12'>
+						<div data-aos="fade" data-aos-duration="1000"class='col-sm-12 col-md-12 col-lg-12'>
 							<h4>lorem ipsum</h4>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 						</div>
-						<div class='col-sm-12 col-md-12 col-lg-12'>
+						<div data-aos="fade-down" data-aos-duration="1000" class='col-sm-12 col-md-12 col-lg-12'>
 							<h4>lorem ipsum</h4>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 						</div>
@@ -149,22 +158,14 @@
         </div>
     </div>
 </footer>
-<script>
-   jQuery(document).ready(function ($) {
-        // Scroll to the desired section on click
-        // Make sure to add the `data-scroll` attribute to your `<a>` tag.
-        // Example: 
-        // `<a data-scroll href="#my-section">My Section</a>` will scroll to an element with the id of 'my-section'.
-        function scrollToSection(event) {
-            event.preventDefault();
-            var $section = $($(this).attr('href'));
-            $('html, body').animate({
-                scrollTop: $section.offset().top
-            }, 500);
-        }
-        $('[data-scroll]').on('click', scrollToSection);
-    }(jQuery));
-</script>
+
+
 <script src="Assets/js/jquery.smooth-scroll.min.js" type="text/javascript" ></script>
-    </body>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+    
+</script>
+</body>
 </html>
