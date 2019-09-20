@@ -302,3 +302,9 @@ a.socialIcon:hover, .socialHoverClass {
 .social-circle a {
  background-color: #D3D3D3;   
 }
+#privacy{
+	text-align: center;
+}
+#privacy_page{
+	    background-color: #e9f0f2;
+}
